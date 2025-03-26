@@ -1,0 +1,17 @@
+{
+	"name": "Ubuntu",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"python": {
+			"installTools": true,
+			"version": "latest"
+		},
+		"desktop-lite": {
+			"password": "vscode",
+			"webPort": "2000",
+			"vncPort": "2200"
+		}
+	},
+	"forwardPorts": [2000, 2200],
+  "postCreateCommand": "pip3 install --user -r requirements.txt"
+}
